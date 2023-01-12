@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(59, 57, 57);
+    width: 100vw;
+    height: 55vh;
+}
+
+button {
+    position: relative;
+    border: none;
+    transition: 0.4s ease-in;
+    z-index: 1;
+}
+button::before, button::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+}
+
+.jedan:hover {
+    box-shadow: inset -10em 0 0 0 #6eca0c,
+    inset 10em 0 0 0 #96c0ff;
+}
+
+.dva::after {
+    height: 0;
+    left: 0;
+    top: 0;
+    transition-duration: 0.6s;
+    width: 100%;
+}
+.tri::after {
+    height: 0;
+    left: 0;
+    bottom: 0;
+    transition-duration: 0.6s;
+    width: 100%;
+}
+.dva:hover::after, .tri:hover::after {
+    box-shadow: inset 0 5em 0 0 #96c0ff;
+    height: 100%;
+}
+
+.sest:hover {
+    background: #d196ff;
+    box-shadow: 0 0 5px #d196ff,
+    0 0 25px #d196ff,
+    0 0 50px #d196ff,
+    0 0 200px #d196ff;
+}
+
+.pet:hover {
+    box-shadow: 10px 10px 0 #d196ff;
+    top: -3px;
+    left: -3px;
+}
+
+.cetiri::after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition-duration: 0.6s;
+    transform-origin: top left;
+    width: 0;
+}
+.cetiri:hover:after {
+    height: 100%;
+    width: 100%;
+    box-shadow: inset 0 5em 0  #96c0ff;
+}
+
+.sedam:hover {
+    border: 2px solid #d196ff;
+    color: #d196ff;
+    background-color: #17181c;
+}
